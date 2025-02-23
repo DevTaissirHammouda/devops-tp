@@ -1,12 +1,15 @@
-stages :
+stages:
   - test
   - deploy
-test - job :
-  stage : test
-  script :
-    - echo " Running tests ... "
-    - python -m unittest discover -s hello - devops
-deploy - job :
-  stage : deploy
-  script :
-    - echo " Deploying application ... "
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - python -m unittest discover -s hello_devops
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
+
